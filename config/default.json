@@ -1,0 +1,16 @@
+{
+	"url" : "http://www.google.com/search",
+	"data" : [
+	{
+		"title": "Google",
+		"query": "https://www.google.co.jp/"
+		},
+	{
+		"title": "Yahoo",
+		"query": "http://www.yahoo.co.jp/"
+	},
+	{
+		"title": "Bing",
+		"query": "http://www.bing.com/"
+	}]
+}

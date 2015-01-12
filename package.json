@@ -1,0 +1,11 @@
+{
+	"name": "Index_Scraiping",
+	"version": "0.0.1",
+	"description": "Index_Scraiping",
+	"author": "Kazuki Sato",
+	"license": "MIT",
+	"dependencies": {
+		"config": "*",
+		"cheerio-httpcli":"*"
+	}
+}
