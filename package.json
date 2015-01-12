@@ -1,8 +1,8 @@
 {
-	"name": "Index_Scraiping",
+	"name": "IndexScraiping",
 	"version": "0.0.1",
-	"description": "Index_Scraiping",
-	"author": "Kazuki Sato",
+	"description": "IndexScraiping",
+	"author": "qaz",
 	"license": "MIT",
 	"dependencies": {
 		"config": "*",
