@@ -3,14 +3,14 @@
 	"data" : [
 	{
 		"title": "Google",
-		"query": "https://www.google.co.jp/"
+		"url": "https://www.google.co.jp/"
 		},
 	{
 		"title": "Yahoo",
-		"query": "http://www.yahoo.co.jp/"
+		"url": "http://www.yahoo.co.jp/"
 	},
 	{
 		"title": "Bing",
-		"query": "http://www.bing.com/"
+		"url": "http://www.bing.com/"
 	}]
 }

@@ -4,12 +4,12 @@ var client = require('cheerio-httpcli');	// 通信
 var fs = require('fs');						// ファイル
 
 // 通信する関数
-var fetch = function (url) {
-	var query = "site:" + url.query;
+var fetch = function (data) {
+	var query = "site:" + data.url;
 	client.fetch(config.url, { q: query }, function (err, $, res) {
 		var index = $("#resultStats").text().split("約 ")[1].split(" 件")[0];
-		var text = url.title + " : " + index + "\n";
-		console.log(url.title + " : " + index);
+		var text = data.title + " : " + index + "\n";
+		console.log(data.title + " : " + index);
 		fs.appendFile('result.txt', text ,'utf8', function (err) {});
 	});
 };
