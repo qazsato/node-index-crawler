@@ -1,5 +1,21 @@
 {
-	"url" : "http://www.google.com/search",
+	"global": {
+		"url" : "http://www.google.com/search",
+		"cron": {
+			"enable": false,
+			"time": "0 0 0 * * 0-6"
+		},
+		"spreadsheet": {
+			"enable": false,
+			"spreadsheetId": "",
+			"worksheetId": "",
+			"username": "",
+			"password": ""
+		},
+		"csv": {
+			"enable": false
+		}
+	},
 	"data" : [
 	{
 		"title": "Google",
