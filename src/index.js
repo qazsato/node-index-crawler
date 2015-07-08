@@ -1,5 +1,6 @@
 // モジュール読み込み
 var config      = require('config');                  // 定義
+var asciify     = require('asciify');                 // AA
 var cronJob     = require('cron').CronJob;            // cron
 var client      = require('cheerio-httpcli');         // 通信
 var fs          = require('fs');                      // ファイル
@@ -7,11 +8,22 @@ var async       = require('async');                   // 同期処理
 var Spreadsheet = require('edit-google-spreadsheet'); // スプレッドシート
 
 var start = function () {
-  cronFunc(function () {
-    fetchFunc(function (indexes) {
-      spreadSheetFunc(indexes);
-      csvFileFunc(indexes);
+  asciiFunc(function () {
+    cronFunc(function () {
+      fetchFunc(function (indexes) {
+        spreadSheetFunc(indexes);
+        csvFileFunc(indexes);
+      });
     });
+  });
+};
+
+var asciiFunc = function (callback) {
+  asciify("IndexCrawler", {font: "small"}, function(err, msg) {
+    if(err) return;
+    console.log(msg);
+    console.log("launch time : " + new Date().toLocaleString() + "\n");
+    callback();
   });
 };
 
