@@ -49,17 +49,19 @@ var fetchFunc = function (callback) {
   var indexes = [];
   async.eachSeries(config.data, function(data, next) {
     var query = "site:" + data.url;
-    client.fetch(config.global.url, { q: query }, function (err, $, res) {
-      // HTML解析
-      $("#resultStats").find("nobr").remove();
-      var index = {
-        title: data.title,
-        number: $("#resultStats").text().replace(/,/g, "").match(/\d+/g)[0]
-      };
-      console.log(index.title + " : " + index.number);
-      indexes.push(index);
-      next();
-    });
+    setTimeout(function () {
+      client.fetch(config.global.url, { q: query }, function (err, $, res) {
+        // HTML解析
+        $("#resultStats").find("nobr").remove();
+        var index = {
+          title: data.title,
+          number: $("#resultStats").text().replace(/,/g, "").match(/\d+/g)[0]
+        };
+        console.log(index.title + " : " + index.number);
+        indexes.push(index);
+        next();
+      });
+    }, config.global.delayTime);
   }, function(err) {
       callback(indexes);
   });

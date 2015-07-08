@@ -1,6 +1,7 @@
 {
 	"global": {
 		"url" : "http://www.google.com/search",
+		"delayTime": 3000,
 		"cron": {
 			"enable": false,
 			"time": "0 0 0 * * 0-6"
