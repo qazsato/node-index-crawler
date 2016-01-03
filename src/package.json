@@ -2,7 +2,7 @@
   "name": "IndexCrawler",
   "version": "1.0.0",
   "description": "IndexCrawler",
-  "author": "qaz-s",
+  "author": "qazsato",
   "license": "MIT",
   "dependencies": {
     "asciify": "^1.3.5",
